@@ -13,9 +13,6 @@ xinput --set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Jumpy Cursor Threshold
 xinput --set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Palm Detection" 1
 
 
-#for file in /etc/X11/xinit/xinitrc.d/*; do . "$file"; done
-#unset file
-
 urxvtd -q -f -o && urxvtc -pe tabbedex &
 hsetroot -full ~/.local/wallpapers/wall.jpg &
 #synclient TouchpadOff=1 &
@@ -27,3 +24,4 @@ devmon -g -s --exec-on-drive "notify-send mounted %l" &
 nm-applet &
 #cbatticon -l 10 -r 5 -u 15 -x "/home/helb/bin/restartpanel.sh" &
 xautolock -time 5 -locker slock &
+
