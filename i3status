@@ -76,7 +76,7 @@ disk "/media/media" {
 
 wireless _first_ {
 	format_up = " W: (%quality at %essid) %ip "
-	format_down = " ☡ WiFi "
+	format_down = " Ð wifi "
 }
 
 ethernet _first_ {
