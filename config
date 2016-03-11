@@ -13,11 +13,11 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Input Mono 7
+font pango:Input Mono 12px
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
+#font pango:DejaVu Sans Mono 6
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -149,18 +149,20 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
   #font pango:Termsyn
-  font pango:Termsyn.icons 16
+  #font pango:Termsyn.icons 16
+  font pango:Input Mono, SFNS Display 12px
   position top
   status_command i3status -c ~/.config/i3/i3status
   tray_output primary
+  separator_symbol "│"
   colors {
     separator #444444
     background #222222
-    statusline #666666
+    statusline #999999
     focused_workspace #f0544c #f0544c #ffffff
     active_workspace #333333 #333333 #888888
     inactive_workspace #333333 #333333 #888888
-    urgent_workspace #eb709b #eb709b #ffffff
+    urgent_workspace #ffed00 #ffed00 #222222
   }
 }
 

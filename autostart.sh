@@ -9,9 +9,9 @@ kookaburra)
     xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Timeout" 8 200
     xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Axes" 8 6 7 4 5
     echo 220 | sudo tee /sys/devices/platform/i8042/serio1/serio2/sensitivity
-    xinput --set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Edge Scrolling" 1 1 0
-    xinput --set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Edges" 0 0 0 4582
-    xinput --set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Scrolling Distance" 300 300
+#    xinput --set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Edge Scrolling" 1 1 0
+#    xinput --set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Edges" 0 0 0 4582
+#    xinput --set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Scrolling Distance" 300 300
     xinput --set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Two-Finger Scrolling" 1 1
     xinput --set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Jumpy Cursor Threshold" 250
     xinput --set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Palm Detection" 1
