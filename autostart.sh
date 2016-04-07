@@ -26,6 +26,7 @@ raven)
     ;;
 esac
 
+redshift-gtk &
 hsetroot -full ~/.local/wallpapers/wall.jpg &
 xbindkeys &
 setxkbmap vok &
