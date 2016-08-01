@@ -20,12 +20,15 @@ kookaburra)
     ;;
 magpie)
     xrandr --dpi 96 &
+    numlockx on &
     ;;
 raven)
     xrandr --dpi 94 &
+    numlockx on &
     ;;
 esac
 
+urxvtd -q -f -o && urxvtc -pe tabbedex &
 redshift-gtk &
 hsetroot -full ~/.local/wallpapers/wall.jpg &
 xbindkeys &
@@ -33,4 +36,3 @@ setxkbmap vok &
 devmon -g -s --exec-on-drive "notify-send mounted %l" &
 nm-applet &
 xautolock -time 5 -locker slock &
-urxvtd -q -f -o && urxvtc -pe tabbedex &
