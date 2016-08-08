@@ -35,4 +35,4 @@ xbindkeys &
 setxkbmap vok &
 devmon -g -s --exec-on-drive "notify-send mounted %l" &
 nm-applet &
-xautolock -time 5 -locker slock &
+xautolock -time 15 -locker slock &
