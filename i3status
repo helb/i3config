@@ -10,26 +10,26 @@ general {
 	colors = true
 	color_good = "#BBBBBB"
 	color_bad = "#CC1616"
-	color_degraded = "#55858E"
+	color_degraded = "#5f959f"
 	interval = 2
 }
 
-order += "battery 0"
 order += "volume master"
-order += "ethernet _first_"
-order += "wireless _first_"
+order += "battery 0"
+#order += "ipv6"
 #order += "run_watch VPN"
 #order += "run_watch DHCP"
+order += "ethernet _first_"
+order += "wireless _first_"
 order += "tztime local"
-#order += "ipv6"
 
 volume master {
 	device = "default"
 	mixer = "Master"
 	mixer_idx = 0
 	# termsyn font
-	format = "🔉 %volume "
-	format_muted = "🔇 "
+	format = "%volume "
+	format_muted = ""
 }
 
 load {
@@ -66,16 +66,8 @@ cpu_temperature 3 {
 	max_threshold = 95
 }
 
-disk "/" {
-	format = " ¨ %avail:/ "
-}
-
-disk "/media/media" {
-	format = " ¨ %avail:m "
-}
-
 wireless _first_ {
-	format_up = " ᛉ (%quality at %essid) %ip "
+	format_up = "%quality at %essid %ip"
 	format_down = ""
 }
 
@@ -85,7 +77,7 @@ ethernet _first_ {
 #	format_down = " ∅ eth0  "
 
 	# termsyn font
-	format_up =  " ⚼  %ip "
+	format_up =  "%ip"
 	format_down = ""
 }
 
@@ -100,12 +92,12 @@ run_watch VPN {
 battery 0 {
     last_full_capacity = true
 	format_down = ""
-    format = "🔋 %status %percentage %remaining %consumption "
+    format = "%status %percentage %remaining %consumption "
 }
 
 
 tztime local {
 #	format = " %h-%d %H:%M ☰ "
 	# termsyn font
-	format = " %H:%M"
+	format = "%H:%M"
 }
