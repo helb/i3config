@@ -28,13 +28,18 @@ raven)
     ;;
 esac
 
-urxvtd -q -f -o && urxvtc -pe tabbedex &
+#urxvtd -q -f -o && urxvtc -pe tabbedex &
+#polybar panel &
 redshift-gtk &
-hsetroot -full ~/.local/wallpapers/wall.jpg &
+#hsetroot -full ~/.local/wallpapers/wall.jpg &
 xbindkeys &
 setxkbmap vok &
+setxkbmap -option compose:menu &
 devmon -g -s --exec-on-drive "notify-send mounted %l" &
 nm-applet &
+kitty &
 xautolock -time 15 -locker slock
 xset s off -dpms &
 xset +fp /home/helb/.fonts && xset fp rehash &
+#xinput set-button-map "Logitech MX Master" 7 6
+#/home/helb/sw/artpip &
